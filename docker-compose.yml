@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   drupal:
-    container_name: drupal-web-k8sdeploy
+    container_name: drupal-sshoc-tdt
     build:
       context: .
       dockerfile: docker/Dockerfile
