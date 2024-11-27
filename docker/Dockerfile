@@ -1,5 +1,5 @@
 FROM ubuntu:jammy
-MAINTAINER Klaus Illmayer <klaus.illmayer@oeaw.ac.at>
+LABEL org.opencontainers.image.authors="Klaus Illmayer <klaus.illmayer@oeaw.ac.at>"
 
 ENV DEBIAN_FRONTEND=noninteractive PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/var/www/drupal/html/vendor/drush/drush/
 
@@ -26,8 +26,8 @@ RUN locale-gen en_US.UTF-8 && \
     locale-gen de_DE.UTF-8 && \
     apt-get update && \
     apt-get install -y curl git vim mysql-client unzip \
-                   apache2 libapache2-mod-php8.2 \
-                   php8.2-cli php8.2-curl php8.2-gd php8.2-mbstring php8.2-mysql php8.2-opcache php8.2-pgsql php8.2-sqlite3 php8.2-xml php8.2-yaml php8.2-zip && \
+                   apache2 libapache2-mod-php8.3 \
+                   php8.3-cli php8.3-curl php8.3-gd php8.3-mbstring php8.3-mysql php8.3-opcache php8.3-pgsql php8.3-sqlite3 php8.3-xml php8.3-yaml php8.3-zip && \
     apt-get clean
 
 # set time

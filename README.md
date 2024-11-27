@@ -40,3 +40,8 @@ Config is used to upgrade Drupal websites. Always run a `drush cex` on the devel
 
 For the basic instance, configs are not used, but the forks will use it. When merging the fork be aware that changes in config and custom may be overwritten (depending on the timeline). For the default-repo it is important, to leave the directories config and custom as they are, otherwise there may be problems when merging changes from drupal-default to the forks.
 
+# Local development
+For local development run `docker-compose up -d` (adapt the container-name in the docker-compose.yml) but before create a `.env`-file holding the necessary environment variables. There is a default.env that you can take as a blueprint.
+
+If you like to test an already existing Drupal, you also need to get a database dump and put it in the local MariaDB (use `drush sql:dump` and `drush sql:cli` to create and import the dump). You probably also need to run a `drush cr`.
+
